@@ -1,0 +1,11 @@
+<h2>Temporizador</h2>
+
+<p>Digite o tempo(s):</p>
+<input class="form-control" type="text" [(ngModel)]="intervalo" />
+<br />
+
+<button (click)="tempo.start(this.intervalo * 1000)">Iniciar</button>
+<button (click)="tempo.stop()">Parar</button>
+<button (click)="tempo.reset()">limpar tela</button>
+
+<p>{{tempo.getCount()}}s</p>
